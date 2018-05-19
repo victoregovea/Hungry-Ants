@@ -1,0 +1,151 @@
+*{
+  font-family: 'Carter One', cursive;
+}
+
+body{
+  background-image: url('../images/green-background.jpg')
+}
+
+#game{
+  height:600px;
+  width: 1000px;
+  background-image:url("../images/game-scenario.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin:100px auto;
+  box-shadow:20px 20px 50px black;
+  position: absolute;
+  z-index:1;
+  /*position: absolute;*/
+}
+
+
+#reset-menu{
+  height:600px;
+  width: 1000px;
+  margin:100px auto;
+  background-color:rgba(0,0,0,0.7);
+  z-index: 0;
+  position: absolute;
+}
+
+
+
+.board{
+  position:absolute;
+}
+
+#board1{
+  margin-left:50px;
+  width: 300px;
+}
+#board2{
+  margin-left:776px;
+  width: 300px;
+}
+
+#round{
+  margin: 100px 0px 0px 400px;
+  color:orangered;
+  text-shadow:5px 5px 4px black;
+  display: inline-block;
+  position: absolute;
+
+}
+
+h1{
+  text-shadow:5px 5px 4px black;
+  font-size: 50px;
+  margin-top: 0px;
+  color: orangered;
+  margin-bottom: 0px;
+}
+
+h2{
+  text-shadow:5px 5px 4px black;
+  color: red;
+  font-size: 30px;
+  position: absolute;
+  margin-top: 0px;
+}
+
+h3{
+    font-size: 35px;
+    color: yellow;
+    position: absolute;
+    text-shadow:5px 5px 4px black;
+}
+
+.speed{
+  color:black;
+  margin-top:325px;
+}
+
+#speed1{
+  margin-left: 100px;
+  margin-top:325px;
+  display: none;
+}
+
+#speed2{
+  margin-left: 800px;
+  margin-top:325px;
+  display: none;
+}
+
+#cup{
+  position:absolute;
+  transform: rotate(180deg);
+  width:200px;
+  height: 300px;
+  margin-left:400px;
+  margin-top: 250px;
+  z-index:0;
+}
+
+#ant1{
+  position:absolute;
+  height: 200px;
+  display: inline-block;
+  -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+  margin-top: 350px;
+/*  border: 1px solid black */;
+}
+
+#ant2{
+  position:absolute;
+  height: 200px;
+  display: inline-block;
+  float: right;
+  margin-top: 350px;
+  margin-left: 800px;
+/*  border: 1px solid black */;
+}
+
+#item{
+  position:absolute;
+  display:inline-block;
+  height: 100px;
+  width:100px;
+  margin-left: 400px;
+  margin-top:410px;
+}
+
+.{
+  transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
+

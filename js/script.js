@@ -17,7 +17,7 @@ var items = [
   { name: "Melon", url: "../images/Melon.png", points: 1000 },
   { name: "Banana", url: "../images/Banana.png", points: 600 },
   { name: "Grapes", url: "../images/Grapes.png", points: 400 },
-  { name: "Bomb", url: "../images/Bomb.png", points: -500 }
+  { name: "Bomb", url: "../images/Bomb.png", points: -500 },
 ];
 
 
@@ -79,6 +79,7 @@ music.play();
 
 //------------------------------Movements----------------------------------------------//
 function raiseCup() {
+  music.stop();
   $("#cup").css("margin-top", "0px");
   $("#cup").css("transition-duration", "100ms");
   $("#cup").css("transition-timing", "linear");
@@ -90,7 +91,7 @@ function raiseCup() {
 }
 
 function dropCup() {
-  
+  music.play();
   $("#cup").css("margin-top", "250px");
   $("#cup").css("transition-duration", "200ms");
   $("#cup").css("transition-timing", "linear");
@@ -211,24 +212,29 @@ function toggleRound(){
 
 function nextRound() {
   currentRound++;
-  if (currentRound < 5) {
+  if (currentRound < 6) {
     $("#round").css("margin-left", "400px");
     $("#roundNum").html(currentRound);
     $("#round").fadeIn(1000);
     eat.play()
+    music.play();
   } else {
     if (scorePlayer1 > scorePlayer2) {
       $("#round").css("margin-left", "320px");
       $("#round").html("PLAYER 1 WINS!");
+      $("#reset-menu").fadeIn(1000);
     } else {
       $("#round").css("margin-left", "320px")
       $("#round").html("PLAYER 2 WINS!");
+      $("#reset-menu").fadeIn(1000);
     }
   }
 }
 
+
+
 function round() {
-  if (currentRound<5){
+  if (currentRound<6){
   roundTime = randomTime(10000,5000);
   pauseTime = roundTime + 5000;
   // falseShake(roundTime);
@@ -241,11 +247,36 @@ function round() {
   }else if  (scorePlayer1 > scorePlayer2) {
     $("#round").fadeToggle(1000)
     $("#round").html("PLAYER 1 WINS!");
+    $("#reset-menu").fadeIn(1000);
   } else {
     $("#round").fadeToggle(1000)
     $("#round").html("PLAYER 2 WINS!");
+    $("#reset-menu").fadeIn(1000);
   }
 }
+
+
+$("#play-again").click(function() {
+   isCupUp = false;
+   scorePlayer1 = 0;
+   scorePlayer2 = 0;
+   currentItemIndex = "";
+   currentRound = 0;
+   timeRaised = "";
+   playerSpeed = "";
+   rShake = "";
+   itemAvailable = true;
+   isDizzy1 = false;
+   isDizzy2 = false;
+   $("#p1Score").html(scorePlayer1)
+   $("#p2Score").html(scorePlayer2)
+   $('#round').html('ROUND <span id="roundNum"></span>');
+   round();
+   changeItem();
+   nextRound();
+   music.play();
+   $("#reset-menu").fadeOut(1000);
+})
 
 function changeItem() {
   function displayItem() {

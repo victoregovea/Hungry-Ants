@@ -1,157 +1,195 @@
-*{
-  font-family: 'Carter One', cursive;
+* {
+  font-family: "Carter One", cursive;
 }
 
-body{
-  background-image: url('../images/green-background.jpg')
-}
-
-#game{
-  height:600px;
+#menu {
+  background-image: url(../images/ants2.gif), url(../images/fruit.jpg);
+  height: 600px;
   width: 1000px;
-  background-image:url("../images/game-scenario.jpg");
-  background-repeat: no-repeat;
-  background-size: auto;
-  box-shadow:20px 20px 50px black;
   z-index:1;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
-  margin-top: 100px;
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 25px;
+  background-size:cover;
 }
 
-
-#reset-menu{
-  height:600px;
+#modes{
+  background-color: rgba(144, 238, 144, 0.7);
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  height: 250px;
+  padding-top: 20px;
+  margin-top:150px;
+  position:absolute;
   width: 1000px;
-  background-color:rgba(0,0,0,0.7);
+}
+
+#solo {
+  margin: 15px auto 100px auto;
+}
+
+#vs {
+  margin: 0px auto 100px auto;
+}
+
+body {
+  background-image: url("../images/green-background.jpg");
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+}
+
+#game {
+  height: 600px;
+  width: 1000px;
+  background-image: url("../images/game-scenario.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  box-shadow: 20px 20px 50px black;
+  z-index: 0;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: 10px;
+  border-radius: 25px;
+}
+
+#reset-menu {
+  height: 600px;
+  width: 1000px;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
-  margin-top: 100px;
+  margin-top: 10px;
   display: none;
 }
 
-
-
-.board{
-  position:absolute;
+.board {
+  position: absolute;
 }
 
-#board1{
-  margin-left:50px;
+#board1 {
+  margin-left: 50px;
   width: 300px;
 }
-#board2{
-  margin-left:776px;
+#board2 {
+  margin-left: 776px;
   width: 300px;
 }
 
-#round{
+#round {
   margin: 100px 0px 0px 400px;
-  color:orangered;
-  text-shadow:5px 5px 4px black;
+  color: orangered;
+  text-shadow: 5px 5px 4px black;
   display: inline-block;
   position: absolute;
-
 }
 
-h1{
-  text-shadow:5px 5px 4px black;
+h1 {
+  text-shadow: 5px 5px 4px black;
   font-size: 50px;
   margin-top: 0px;
   color: orangered;
   margin-bottom: 0px;
 }
 
-h2{
-  text-shadow:5px 5px 4px black;
+h2 {
+  text-shadow: 5px 5px 4px black;
   color: red;
   font-size: 30px;
   position: absolute;
   margin-top: 0px;
 }
 
-h3{
-    font-size: 35px;
-    color: yellow;
-    position: absolute;
-    text-shadow:5px 5px 4px black;
+h3 {
+  font-size: 35px;
+  color: yellow;
+  position: absolute;
+  text-shadow: 5px 5px 4px black;
 }
 
-.speed{
-  color:black;
-  margin-top:325px;
+.speed {
+  color: black;
+  margin-top: 325px;
 }
 
-#speed1{
+#speed1 {
   margin-left: 100px;
-  margin-top:325px;
+  margin-top: 325px;
   display: none;
 }
 
-#speed2{
+#speed2 {
   margin-left: 800px;
-  margin-top:325px;
+  margin-top: 325px;
   display: none;
 }
 
-#cup{
-  position:absolute;
+#cup {
+  position: absolute;
   transform: rotate(180deg);
-  width:200px;
+  width: 200px;
   height: 300px;
-  margin-left:400px;
+  margin-left: 400px;
   margin-top: 250px;
-  z-index:0;
+  z-index: 0;
 }
 
-#ant1{
-  position:absolute;
+#ant1 {
+  position: absolute;
   height: 200px;
   display: inline-block;
   -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: FlipH;
-        -ms-filter: "FlipH";
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
   margin-top: 350px;
-/*  border: 1px solid black */;
+  /*  border: 1px solid black */
 }
 
-#ant2{
-  position:absolute;
+#ant2 {
+  position: absolute;
   height: 200px;
   display: inline-block;
   float: right;
   margin-top: 350px;
   margin-left: 800px;
-/*  border: 1px solid black */;
+  /*  border: 1px solid black */
 }
 
-#item{
-  position:absolute;
-  display:inline-block;
+#item {
+  position: absolute;
+  display: inline-block;
   height: 100px;
-  width:100px;
+  width: 100px;
   margin-left: 400px;
-  margin-top:410px;
+  margin-top: 410px;
 }
 
-.{
+. {
   transform: rotate(180deg);
 }
 
-
-button{
-  background-color: #FF4500;
-  border:  3px solid white;
+button {
+  background-color: #ff4500;
+  border: 3px solid white;
   border-radius: 15px;
   display: block;
   font-size: 30px;
@@ -159,16 +197,18 @@ button{
   color: white;
 }
 
-#play-again{
+#play-again {
   margin: 200px auto 100px auto;
 }
 
-#main-menu{
+#main-menu {
   margin: 0px auto 100px auto;
 }
 
-
-
-
-
-
+h4{
+  display: block;
+  margin: 680px auto 0px auto;
+  text-align: center;
+  width: 400px;
+  font-size: 24px;
+}

@@ -59,19 +59,19 @@ function sound(src) {
 }
 
 var hit;
-hit = new sound("../sounds/hit14.mp3.flac");
+hit = new sound("sounds/hit14.mp3.flac");
 
 var swish;
-swish = new sound("../sounds/swish.wav");
+swish = new sound("sounds/swish.wav");
 
 var eat;
-eat = new sound("../sounds/eat.wav");
+eat = new sound("sounds/eat.wav");
 
 var boom;
-boom = new sound("../sounds/boom.wav");
+boom = new sound("sounds/boom.wav");
 
 var music;
-music = new sound("../sounds/HappyLevel.wav");
+music = new sound("sounds/HappyLevel.wav");
 
 music.sound.volume = 0.5;
 

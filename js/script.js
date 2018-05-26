@@ -17,22 +17,22 @@ var pcSpeed = "";
 // Item Array of Objects
 var items = [{
     name: "Melon",
-    url: "./images/Melon.png",
+    url: "../images/Melon.png",
     points: 1000
   },
   {
     name: "Banana",
-    url: "./images/Banana.png",
+    url: "../images/Banana.png",
     points: 600
   },
   {
     name: "Grapes",
-    url: "./images/Grapes.png",
+    url: "../images/Grapes.png",
     points: 400
   },
   {
     name: "Bomb",
-    url: "./images/Bomb.png",
+    url: "../images/Bomb.png",
     points: -500
   },
 ];
@@ -409,7 +409,7 @@ function PcBehavior() {
   function explotion1() {
     $("#item").hide();
     boom.play();
-    $("#ant1").attr("src", "./images/Ant smoke png.png");
+    $("#ant1").attr("src", "../images/Ant smoke png.png");
     setTimeout(antRecover1, 5000);
   }
 

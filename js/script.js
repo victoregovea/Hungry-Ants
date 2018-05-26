@@ -147,7 +147,7 @@ function soloMovebomb() {
   $("#p2Score").html(scorePlayer2);
   itemAvailable = false;
   antCatch2();
-  $("#item").attr("src", "./images/explosion.png");
+  $("#item").attr("src", "../images/explosion.png");
   setTimeout(explotion2, 200)
   setTimeout(antReturn2, 100);
 }
@@ -232,7 +232,7 @@ function PcBehavior() {
     hit.play();
     setTimeout(antReturn1, 100);
     dizzyAnt1();
-    $("#ant1").attr("src", "./images/dizzy ant png.png")
+    $("#ant1").attr("src", "../images/dizzy ant png.png")
   }
 
   function ant2dizzy() {
@@ -240,7 +240,7 @@ function PcBehavior() {
     hit.play();
     setTimeout(antReturn2, 100);
     dizzyAnt2();
-    $("#ant2").attr("src", "./images/dizzy ant png.png")
+    $("#ant2").attr("src", "../images/dizzy ant png.png")
   }
 
   $("#vs").click(function () {
@@ -399,11 +399,11 @@ function PcBehavior() {
 
 
   function antRecover1() {
-    $("#ant1").attr("src", "./images/Ant.png")
+    $("#ant1").attr("src", "../images/Ant.png")
   }
 
   function antRecover2() {
-    $("#ant2").attr("src", "./images/Ant.png")
+    $("#ant2").attr("src", "../images/Ant.png")
   }
 
   function explotion1() {
@@ -416,7 +416,7 @@ function PcBehavior() {
   function explotion2() {
     $("#item").hide();
     boom.play();
-    $("#ant2").attr("src", "./images/Ant smoke png.png");
+    $("#ant2").attr("src", "../images/Ant smoke png.png");
     setTimeout(antRecover2, 5000);
   }
 
@@ -436,7 +436,7 @@ function PcBehavior() {
       $("#p1Score").html(scorePlayer1);
       itemAvailable = false;
       antCatch1();
-      $("#item").attr("src", "./images/explosion.png");
+      $("#item").attr("src", "../images/explosion.png");
       setTimeout(explotion1, 200)
       setTimeout(antReturn1, 100);
 

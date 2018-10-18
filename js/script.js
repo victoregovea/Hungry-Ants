@@ -424,10 +424,8 @@ function PcBehavior() {
 
   //-------------------------------------------------------------- Key Functions-----------------------------------------------------------------------//
 
-  $(document).on("keyup", function (e) {
-    console.log(e.which);
-    //--------------------Player 1------------------------//
-    if (e.which === 68 && isCupUp === true && itemAvailable === true && isDizzy1 === false && currentItemIndex === 3) {
+    function player1logic(){
+    if (isCupUp === true && itemAvailable === true && isDizzy1 === false && currentItemIndex === 3) {
       playerSpeed = Date.now() - timeRaised;
       $("#speed1").html(playerSpeed + " ms!");
       toggleSpeed1();
@@ -440,7 +438,7 @@ function PcBehavior() {
       setTimeout(explotion1, 200)
       setTimeout(antReturn1, 100);
 
-    } else if (e.which === 68 && isCupUp === true && itemAvailable === true && isDizzy1 === false) {
+    } else if (isCupUp === true && itemAvailable === true && isDizzy1 === false) {
       playerSpeed = Date.now() - timeRaised;
       $("#speed1").html(playerSpeed + " ms!");
       toggleSpeed1();
@@ -452,7 +450,7 @@ function PcBehavior() {
       setTimeout(antReturn1, 100);
       pullItemLeft();
 
-    } else if (e.which === 68 && isCupUp === true && itemAvailable === false && isDizzy1 === false) {
+    } else if (isCupUp === true && itemAvailable === false && isDizzy1 === false) {
       playerSpeed = Date.now() - timeRaised;
       $("#speed1").html(playerSpeed + " ms!");
       toggleSpeed1();
@@ -460,18 +458,19 @@ function PcBehavior() {
       antCatch1();
       setTimeout(antReturn1, 100);
 
-    } else if (e.which === 68 && isCupUp === false && isDizzy1 === false) {
+    } else if (isCupUp === false && isDizzy1 === false) {
       ant1dizzy();
       console.log(isDizzy1);
 
-    } else if (e.which === 68 && isDizzy1 === false) {
+    } else if (isDizzy1 === false) {
       antCatch1();
       console.log(isDizzy1);
       setTimeout(antReturn1, 100);
+  }
+    }
 
-
-      //-----------------------Player 2-----------------------------//
-    } else if (e.which === 37 && isCupUp === true && itemAvailable === true && isDizzy2 === false && currentItemIndex === 3 && solo === false) {
+  function player2logic(){
+    if (isCupUp === true && itemAvailable === true && isDizzy2 === false && currentItemIndex === 3 && solo === false) {
       playerSpeed = Date.now() - timeRaised;
       $("#speed2").html(playerSpeed + " ms!");
       toggleSpeed2();
@@ -484,7 +483,7 @@ function PcBehavior() {
       setTimeout(explotion2, 200)
       setTimeout(antReturn2, 100);
 
-    } else if (e.which === 37 && isCupUp === true && itemAvailable === true && isDizzy2 === false && solo === false) {
+    } else if (isCupUp === true && itemAvailable === true && isDizzy2 === false && solo === false) {
       playerSpeed = Date.now() - timeRaised;
       $("#speed2").html(playerSpeed + " ms!");
       toggleSpeed2();
@@ -496,7 +495,7 @@ function PcBehavior() {
       setTimeout(antReturn2, 100);
       pullItemRight();
 
-    } else if (e.which === 37 && isCupUp === true && itemAvailable === false && isDizzy2 === false && solo === false) {
+    } else if (isCupUp === true && itemAvailable === false && isDizzy2 === false && solo === false) {
       playerSpeed = Date.now() - timeRaised;
       $("#speed2").html(playerSpeed + " ms!");
       toggleSpeed2();
@@ -504,12 +503,32 @@ function PcBehavior() {
       antCatch2();
       setTimeout(antReturn2, 100);
 
-    } else if (e.which === 37 && isCupUp === false && isDizzy2 === false && solo === false) {
+    } else if (isCupUp === false && isDizzy2 === false && solo === false) {
       ant2dizzy();
       console.log(isDizzy2);
 
-    } else if (e.which === 37 && isDizzy2 === false && solo === false) {
+    } else if (isDizzy2 === false && solo === false) {
       antCatch2();
       setTimeout(antReturn2, 100);
     }
+  }
+
+
+
+  $(document).on("keyup", function (e) {
+    console.log(e.which);
+    if(e.wich === 68){
+    player1logic();
+    }else if(e.wich===37){
+      player2logic();
+    }
+  });
+
+
+  $("#ant1").click(function(){
+    player1logic();
+  });
+
+  $("#ant2").click(function(){
+    player2logic();
   });

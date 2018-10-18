@@ -2,6 +2,7 @@
   font-family: "Carter One", cursive;
 }
 
+
 #menu {
   background-image: url(../images/ants2.gif), url(../images/fruit.jpg);
   height: 600px;
@@ -42,7 +43,7 @@ body {
 }
 
 #logo {
-  display: block;
+ 
   margin: 0 auto;
   text-align: center;
   width: 400px;

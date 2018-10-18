@@ -40,6 +40,7 @@
 
 body {
   background-image: url("../images/green-background.jpg");
+  background-size: cover;
 }
 
 #logo {
